@@ -1,7 +1,7 @@
 import os
 import sys
 modelname=sys.argv[1]
-if sys.argv[2] == None:
+if len(sys.argv) == 1:
     xyzres = "0.06"
 else: 
     xyzres = sys.argv[2]
