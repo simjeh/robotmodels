@@ -1,0 +1,151 @@
+<Robot name="Tocabi_arm">
+<KinBody name="T_arm">
+  <Body name="Torso" type="dynamic">
+    <Translation>0.0 0.0 0.0</Translation>
+    <Geom type="box">
+        <Extents>0.1 0.2 0.22</Extents>
+        <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>
+  </Body>
+  <Body name="a0" type="dynamic">
+    <Translation>0.023 0.154 0.2925</Translation>
+  </Body>
+  <Body name="a1" type="dynamic">
+    <offsetfrom>a0</offsetfrom>
+    <Translation>0.0 0.1491 0.0</Translation>
+  </Body>
+  <Body name="a2" type="dynamic">
+    <offsetfrom>a1</offsetfrom>
+    <Translation>0.0 0.0 0.0</Translation>
+    <Geom type="cylinder">
+        <rotationaxis>0 0 1 90</rotationaxis>
+        <radius>0.04</radius>
+        <height>0.04</height>
+        <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>
+  </Body>
+
+  <Body name="a3" type="dynamic">
+    <offsetfrom>a2</offsetfrom>
+    <Translation>0.0 0.0 0.0</Translation>
+  </Body>
+
+  <Body name="a4" type="dynamic">
+    <offsetfrom>a3</offsetfrom>
+    <Translation>0.0 0.2151 0.0</Translation>
+  </Body>
+
+  <Body name="a5" type="dynamic">
+    <offsetfrom>a4</offsetfrom>
+    <Translation>0.0 0.2688 0.0</Translation>
+  </Body>
+
+  <Body name="a6" type="dynamic">
+    <offsetfrom>a5</offsetfrom>
+    <Translation>0.0 0.0 0.0</Translation>
+  </Body>
+  
+  <Body name="a7" type="dynamic">
+    <offsetfrom>a6</offsetfrom>
+    <Translation>0.0 0.0 0.0</Translation>
+  </Body>
+
+  <Body name="a8" type="dynamic">
+    <offsetfrom>a7</offsetfrom>
+    <Translation>0.0 0.0375 0.0</Translation>
+    <Geom type="cylinder">
+        <Translation>0.0 0.0 0.0</Translation>
+        <rotationaxis>1 0 0 90</rotationaxis>
+        <radius>0.02</radius>
+        <height>0.03</height>
+        <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>
+  </Body>
+
+  <Joint name="Fa0" type="hinge" enable="false">
+    <Body>Torso</Body>
+    <Body>a0</Body>
+    <axis>0 0 1</axis>
+    <limitsdeg>0 0</limitsdeg>
+  </Joint>   
+ <Joint name="Ja1" type="hinge">
+    <Body>a0</Body>
+    <Body>a1</Body>
+    <offsetfrom>a0</offsetfrom>
+    <axis>0 0 1</axis>
+    <limitsdeg>-130 58</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>
+  <Joint name="Ja2" type="hinge">
+    <Body>a1</Body>
+    <Body>a2</Body>
+    <offsetfrom>a1</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-360 360</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>
+  <Joint name="Ja3" type="hinge">
+    <Body>a2</Body>
+    <Body>a3</Body>
+    <offsetfrom>a2</offsetfrom>
+    <axis>1 0 0</axis>
+    <limitsdeg>-97 97</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>  
+  <Joint name="Ja4" type="hinge">
+    <Body>a3</Body>
+    <Body>a4</Body>
+    <offsetfrom>a3</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-270 270</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>  
+  <Joint name="Ja5" type="hinge">
+    <Body>a4</Body>
+    <Body>a5</Body>
+    <offsetfrom>a4</offsetfrom>
+    <axis>1 0 0</axis>
+    <limitsdeg>-160 90</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>  
+  <Joint name="Ja6" type="hinge">
+    <Body>a5</Body>
+    <Body>a6</Body>
+    <offsetfrom>a5</offsetfrom>
+    <axis>0 1 0</axis>
+    <limitsdeg>-270 270</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>  
+  <Joint name="Ja7" type="hinge">
+    <Body>a6</Body>
+    <Body>a7</Body>
+    <offsetfrom>a6</offsetfrom>
+    <axis>1 0 0</axis>
+    <limitsdeg>-90 95</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>  
+  <Joint name="Ja8" type="hinge">
+    <Body>a7</Body>
+    <Body>a8</Body>
+    <offsetfrom>a7</offsetfrom>
+    <axis>0 0 1</axis>
+    <limitsdeg>-78 65</limitsdeg>
+    <maxvel>1.5708</maxvel>
+    <resolution>0.25</resolution>
+  </Joint>   
+</KinBody>
+
+
+<Manipulator name="armL">
+   <base>Torso</base>  
+   <effector>a8</effector>           
+</Manipulator>
+
+</Robot> 
