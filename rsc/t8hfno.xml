@@ -13,6 +13,13 @@
   <Body name="a1" type="dynamic">
     <offsetfrom>a0</offsetfrom>
     <Translation>0.0 0.1491 0.0</Translation>
+    <Geom type="cylinder">
+      <Translation>0.0 -0.1491 0.0</Translation>
+      <rotationaxis>1 0 0 90</rotationaxis>
+      <radius>0.04</radius>
+      <height>0.04</height>
+      <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>
   </Body>
   <Body name="a2" type="dynamic">
     <offsetfrom>a1</offsetfrom>
@@ -28,21 +35,49 @@
   <Body name="a3" type="dynamic">
     <offsetfrom>a2</offsetfrom>
     <Translation>0.0 0.0 0.0</Translation>
+    <Geom type="cylinder">
+      <Translation>0.0 0.05 0.0</Translation>
+      <rotationaxis>1 0 0 90</rotationaxis>
+      <radius>0.03</radius>
+      <height>0.03</height>
+      <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>
   </Body>
 
   <Body name="a4" type="dynamic">
     <offsetfrom>a3</offsetfrom>
     <Translation>0.0 0.2151 0.0</Translation>
+    <Geom type="cylinder">
+      <Translation>0.0 0.0 0.0</Translation>
+      <rotationaxis>0 1 0 90</rotationaxis>
+      <radius>0.03</radius>
+      <height>0.03</height>
+      <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>   
   </Body>
 
   <Body name="a5" type="dynamic">
     <offsetfrom>a4</offsetfrom>
     <Translation>0.0 0.2688 0.0</Translation>
+    <Geom type="cylinder">
+      <Translation>0.0 -0.08 0.0</Translation>
+      <rotationaxis>1 0 0 90</rotationaxis>
+      <radius>0.03</radius>
+      <height>0.03</height>
+      <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>  
   </Body>
 
   <Body name="a6" type="dynamic">
     <offsetfrom>a5</offsetfrom>
     <Translation>0.0 0.0 0.0</Translation>
+    <Geom type="cylinder">
+      <Translation>0.0 0.0 0.0</Translation>
+      <rotationaxis>0 1 0 90</rotationaxis>
+      <radius>0.03</radius>
+      <height>0.03</height>
+      <diffuseColor>0.05 0.05 0.05</diffuseColor>
+    </Geom>
   </Body>
   
   <Body name="a7" type="dynamic">
@@ -54,10 +89,10 @@
     <offsetfrom>a7</offsetfrom>
     <Translation>0.0 0.0375 0.0</Translation>
     <Geom type="cylinder">
-        <Translation>0.0 0.0 0.0</Translation>
+        <Translation>0.0 0.01 0.0</Translation>
         <rotationaxis>1 0 0 90</rotationaxis>
         <radius>0.02</radius>
-        <height>0.03</height>
+        <height>0.02</height>
         <diffuseColor>0.05 0.05 0.05</diffuseColor>
     </Geom>
   </Body>
