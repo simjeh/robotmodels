@@ -7,7 +7,8 @@ def copytree(src, dst, symlinks=False, ignore=None):
         s = os.path.join(src, item)
         d = os.path.join(dst, item)
         if os.path.isdir(s):
-            shutil.copytree(s, d, symlinks, ignore)
+            try : shutil.copytree(s, d, symlinks, ignore)
+            except : pass
         else:
             shutil.copy2(s, d)
 
